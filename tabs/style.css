@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.pages {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(200, 212, 93);
+  height: 100vh;
+  width: 100%;
+}
+
+.page {
+  width: 5%;
+  transition: all 2s;
+}
+
+.page#page1 {
+  background-color: antiquewhite;
+}
+
+.page#page2 {
+  background-color: rgb(255, 250, 103);
+}
+
+.page#page3 {
+  background-color: rgb(206, 255, 120);
+}
+
+.page#page4 {
+  background-color: rgb(94, 165, 18);
+}
+
+.page#page5 {
+  background-color: rgb(200, 212, 93);
+}
+
+.active {
+  width: 100%;
+}

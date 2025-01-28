@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input Event</title>
+    <style>
+      h1 {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <label>
+      Font size:
+      <input type="number" />
+    </label>
+
+    <script>
+      // Select the first h1 element from the HTML document and store it in the 'title' variable
+      // querySelector finds HTML elements using CSS selectors (like in CSS styling)
+      let title = document.querySelector("h1");
+
+      // Select the first input element and store it in the 'input' variable
+      let input = document.querySelector("input");
+
+      // Add an event listener to the input element that watches for any changes
+      // 'input' event happens whenever the user types or modifies the input value
+      input.addEventListener("input", function (event) {
+        // event.target refers to the element that triggered the event (our input)
+        // event.target.value contains whatever the user typed in the input
+        // This line prints the current input value to the browser's console
+        console.log(event.target.value);
+
+        // Change the font size of our h1 title
+        // We take the input value and add "px" to make it a valid CSS size value
+        // For example, if input value is "20", this becomes "20px"
+        title.style.fontSize = event.target.value + "px";
+      });
+    </script>
+  </body>
+</html>

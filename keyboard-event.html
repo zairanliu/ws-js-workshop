@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyboard Event</title>
+  </head>
+  <body>
+    <p>(Type something)</p>
+    <h1></h1>
+
+    <script>
+      // Find the first h1 heading in our HTML and save it in 'title'
+      let title = document.querySelector("h1");
+
+      // Listen for any key presses anywhere on the webpage
+      // 'keypress' happens whenever the user presses a key on their keyboard
+      window.addEventListener("keypress", function (event) {
+        // Print information about the key press to the console
+        console.log(event);
+
+        // Change the text inside our h1 heading to show:
+        // 1. event.key - the actual character that was typed (like 'a' or '5')
+        // 2. event.code - the physical key that was pressed (like 'KeyA' or 'Digit5')
+        // \n creates a new line between the key and code
+        title.innerText = "Key: " + event.key + "\n Code: " + event.code;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse Event</title>
+    <style>
+      h1 {
+        margin-top: 50%;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="">Not Touching</h1>
+
+    <script>
+      // Find and store the h1 heading
+      let title = document.querySelector("h1");
+
+      // Listen for when mouse button is pressed down anywhere on the page
+      window.addEventListener("mousedown", function (event) {
+        // Change heading text to "Touching" when mouse is pressed
+        title.innerText = "Touching";
+      });
+
+      // Listen for when mouse button is released anywhere on the page
+      window.addEventListener("mouseup", function (event) {
+        // Change heading text to "Not Touching" when mouse is released
+        title.innerText = "Not Touching";
+      });
+    </script>
+  </body>
+</html>

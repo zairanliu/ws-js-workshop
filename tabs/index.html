@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="pages">
+      <div class="page" id="page1">Page 1</div>
+      <div class="page" id="page2">Page 2</div>
+      <div class="page" id="page3">Page 3</div>
+      <div class="page" id="page4">Page 4</div>
+      <div class="page" id="page5">Page 5</div>
+    </div>
+
+    <script>
+      let page1 = document.querySelector("#page1");
+      let page2 = document.querySelector("#page2");
+      let page3 = document.querySelector("#page3");
+      let page4 = document.querySelector("#page4");
+      let page5 = document.querySelector("#page5");
+
+      page1.addEventListener("click", function () {
+        page1.classList.add("active");
+        page2.classList.remove("active");
+        page3.classList.remove("active");
+        page4.classList.remove("active");
+        page5.classList.remove("active");
+      });
+
+      page2.addEventListener("click", function () {
+        page1.classList.remove("active");
+        page2.classList.add("active");
+        page3.classList.remove("active");
+        page4.classList.remove("active");
+        page5.classList.remove("active");
+      });
+
+      page3.addEventListener("click", function () {
+        page1.classList.remove("active");
+        page2.classList.remove("active");
+        page3.classList.add("active");
+        page4.classList.remove("active");
+        page5.classList.remove("active");
+      });
+
+      page4.addEventListener("click", function () {
+        page1.classList.remove("active");
+        page2.classList.remove("active");
+        page3.classList.remove("active");
+        page4.classList.add("active");
+        page5.classList.remove("active");
+      });
+
+      page5.addEventListener("click", function () {
+        page1.classList.remove("active");
+        page2.classList.remove("active");
+        page3.classList.remove("active");
+        page4.classList.remove("active");
+        page5.classList.add("active");
+      });
+
+      /* w/ array and loop */
+      //   let pages = document.querySelectorAll('.page');
+      //   for (let i = 0; i < pages.length; i++) {
+      //     pages[i].addEventListener('click', function () {
+      //         for (let j = 0; j < pages.length; j++) {
+      //             if (i === j) {
+      //                 pages[j].classList.add('active')
+      //             } else {
+      //                 pages[j].classList.remove('active')
+      //             }
+      //         }
+      //     })
+      //   }
+    </script>
+  </body>
+</html>
